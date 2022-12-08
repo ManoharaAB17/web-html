@@ -1,0 +1,13 @@
+div p{
+    color: blue;
+}
+
+div >p{
+    color:aqua;
+}
+div +h1{
+    color: brown;
+}
+div ~p{
+    color: blueviolet;
+}
