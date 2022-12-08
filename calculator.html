@@ -11,25 +11,25 @@
 function add(){           
             let num1 = document.getElementById("num1").value;
             let num2 = document.getElementById("num2").value;
-            document.getElementById("result").innerHTML = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").value = parseInt(num1) + parseInt(num2);
             
         } 
 function sub(){
     let num1 = document.getElementById("num1").value;
             let num2 = document.getElementById("num2").value;
-    document.getElementById("result").innerHTML = parseInt(num1) - parseInt(num2);           
+    document.getElementById("result").value = parseInt(num1) - parseInt(num2);           
            
 }
 function mul(){
     let num1 = document.getElementById("num1").value;
             let num2 = document.getElementById("num2").value;
-    document.getElementById("result").innerHTML = parseInt(num1)  * parseInt(num2);
+    document.getElementById("result").value = parseInt(num1)  * parseInt(num2);
     
 }  
 function div(){
     let num1 = document.getElementById("num1").value;
             let num2 = document.getElementById("num2").value;
-    document.getElementById("result").innerHTML = parseInt(num1) / parseInt(num2);            
+    document.getElementById("result").value = parseInt(num1) / parseInt(num2);            
 } 
 </script>
 <style>
@@ -93,7 +93,7 @@ function div(){
     <div>
         <br>
      <label><b> Result :</b> </label>
-     <div class="op" id="result" > </div>
+     <input id="result">
     </div>
 </form>
 
