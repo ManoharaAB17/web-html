@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circleOne{
+            
+            border: 4px solid black;
+            height: 500px;
+            width: 500px;
+            background-color:aquamarine;
+            margin:auto;
+            border-radius: 300px;
+
+        }
+        
+      
+        .tee{
+            font-size: 36px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: bold;
+            margin: auto;
+            padding:230px;
+
+        }
+    </style>
+    <script>
+     function mclick(){
+        let x = document.getElementById("mclick").innerHTML = "Mouse Clicked";
+           x.style.color ="red";
+     }
+     function mover(){
+        let x = document.getElementById("mclick").innerHTML = "Mouse Over";
+       
+        x.style.fontSize  = '50px';
+        
+     }
+     function mout(){
+        let x = document.getElementById("mclick").innerHTML ="Mouse out";
+        
+        x.style.color ='green';
+     }
+     function mleave(){
+        let x = document.getElementById("mclick").innerHTML ="MouseLeave mouse Out";
+     
+        x.style.color ='green';
+     }
+
+     function mdbl(){
+        let x = document.getElementById("mclick").innerHTML ="Mouse Double Clicked";
+     
+        x.style.color ='green';
+     }
+
+
+
+     function mdown(){
+        let x = document.getElementById("mclick").innerHTML ="Mouse Down";
+     
+     }
+     function mdup(){
+        let x = document.getElementById("mclick").innerHTML ="Mouse Up";
+     
+     }
+
+ 
+
+
+    </script>
+</head>
+<body>
+   
+            <div class="circleOne" >
+                 <div class="tee" onclick="mclick()" onmouseover="mover()" onmouseout="mout()" onmouseleave="mleave()" ondblclick="mdbl()" onmousedown="mdown()" onmouseup="mup()">
+                     <div id="mclick">Circle mouseevents</div> 
+                </div> <br>
+                
+                 </div>
+            
+
+</body>
+</html>
