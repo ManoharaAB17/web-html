@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- <script src="fun.js">   </script> -->
+<script>
+
+function validate(){
+        console.log("calling funcction")
+        let firstName = document.getElementById("firstName")
+        // console.log(firstName.value.length)
+        let nmsg = document.getElementById("nmsg")
+        if(firstName.value.length == ""){
+            //let nmsg = document.getElementById("nmsg")
+            nmsg.innerHTML = "Enter First Name"
+            nmsg.style.color='red'
+        }
+        else if(firstName.value.length > "3"){
+            
+            nmsg.innerHTML = firstName.value
+            }
+        // if(firstName.value == "0"){
+        //     console.log("First enter your name")
+        // }
+       
+        let password =document.getElementById("password")
+        if(password.value.length == "0"){
+                let pmsg = document.getElementById("pmsg")
+            pmsg.innerHTML = "Enter  password"
+            pmsg.style.color ='red'
+            }
+            
+            else if(password.value.length < "8"){
+                let pmsg = document.getElementById("pmsg")
+            pmsg.innerHTML = "Password is weak"
+            pmsg.style.color='blue'
+            }
+            
+            else if(password.value.length >= "8" ){
+                let pmsg = document.getElementById("pmsg")
+                //alert("password is correct")
+                pmsg.innerHTML = "Password is Strong "
+            pmsg.style.color='green'
+            }
+
+            let gen = document.getElementById(g);
+            let gmsg = document.getElementById("gmsg");
+           
+            if (document.registration.gen[0].checked ==false &&
+                document.registration.gen[1].checked == false &&
+                document.registration.gen[2].checked == false){
+                   let gmsg = document.getElementById("gmsg");
+                   gmsg.innerHTML="Select Gender";
+                   gmsg.style.color='red'
+            }
+            else {
+                if(document.registration.gen[0].checked == true){
+                    let m =document.registration.gen[0];
+                    gmsg.innerHTML= m.value;
+                    gmsg.style.color='green'
+
+                }
+                else if(document.registration.gen[1].checked == true){
+                    let f = document.registration.gen[1];
+                    gmsg.innerHTML=f.value;
+                    gmsg.style.color='green'
+
+                }
+                else if(document.registration.gen[2].checked == true){
+                    let o = document.registration.gen[2];
+                     gmsg.innerHTML=o.value;
+                     gmsg.style.color='green'
+
+                }
+
+                
+            }
+               console.log(document.registration.city[1].value)
+            if (document.registration.city[0].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Select city";
+                   cmsg.style.color='red'
+            }
+
+            else if (document.registration.city[1].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Shimogga";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[2].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Bhadrvati";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[3].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Tarikere";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[4].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Biruru";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[5].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Kadur";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[6].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Arasikere";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[7].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Tiptur";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[8].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Tumkuru";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[9].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Banglore";
+                   cmsg.style.color='Green'
+            }
+            else if (document.registration.city[1].selected == true){
+                   let cmsg = document.getElementById("cmsg");
+                   cmsg.innerHTML="Shimogga";
+                   cmsg.style.color='Green'
+            }
+            
+        
+    }
+</script>
+
+</head>
+<body>
+    <form name="registration">
+        <div>
+            
+            <label >Enter First Name :    </label>
+            <input type="text" name="firstName" id="firstName" required > &nbsp; <span id="nmsg"></span>
+        </div>
+        <br>
+        <div>
+            <label >Password : </label>
+            <input type="password" name="password" id="password" requried > <span id="pmsg"></span>
+        </div>
+
+        
+        <br>
+        <div> 
+            <lable> Gender  :</lable><br>
+            &nbsp; &nbsp; &nbsp; <input type="radio" name="gen" value="male" id="g"> Male <br>  
+            &nbsp; &nbsp; &nbsp; <input type="radio" name="gen" value="female" id="g"> Female <br>
+            &nbsp; &nbsp; &nbsp; <input type="radio" name="gen" value="others" id="g"> Others   &nbsp;  &nbsp; <span id="gmsg"></span>
+        
+        <div>
+            <br>
+
+            <div>
+               <label> Select City</label>
+               <select name="city">
+                <option >Select the city </option>  
+                  <option >Shimogga </option>
+                  <option >Badravathi </option>
+                  <option >Tarikere </option>
+                  <option >Birur </option>
+                  <option >Kadudr </option>
+                  <option >Arasikere </option>
+                  <option >Tiptur </option>
+                  <option >Tumkur </option>
+                  <option >Banglore </option>
+                  
+                  
+               </select> <span id="cmsg"></span>
+            </div>
+
+            <button type="button"  onclick ="validate()">Register</button>
+        </div>
+
+    </form>
+</body>
+</html>
